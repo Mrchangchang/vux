@@ -8,8 +8,13 @@
 @weuiCellTipsFontSize:@cell-tips-font-size;
 @weuiCellLabelWidth:105px;
 
-@weuiCellLineHeight: unit((@weuiCellHeight - 2 * @weuiCellGapV) / @weuiCellFontSize); // 高度为44px，减去上下padding的行高
-@weuiCellsMarginTop:unit(20 / @weuiCellFontSize, em);
+@a: unit(@weuiCellHeight);
+@b: unit(@weuiCellGapV);
+@c: unit(@weuiCellFontSize);
+@d: 20 / @c;
+
+@weuiCellLineHeight: (@a - 2 * @b) / @c; // 高度为44px，减去上下padding的行高
+@weuiCellsMarginTop: ~'@{d}em';
 
 // weui switch
 @weuiSwitchHeight: @switch-height;
